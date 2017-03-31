@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import DayItem from './src/components/day-item/day-item';
 
 export default class AwesomeProject extends Component {
   constructor() {
@@ -43,16 +44,6 @@ export default class AwesomeProject extends Component {
   }
 }
 
-class DayItem extends Component {
-  render() {
-    return (
-      <Text style={styles.day}>
-        {this.props.day}
-      </Text>
-    );
-  }
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -69,10 +60,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-  },
-  day: {
-    fontSize: 18,
-    color: '#0000FF'
   }
 });
 
