@@ -13,12 +13,18 @@ import {
 } from 'react-native';
 
 export default class AwesomeProject extends Component {
+  constructor() {
+    super();
+    this.days = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Hari-hari yang akan dilalui!
         </Text>
+        {this.listDays()}
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
@@ -27,6 +33,22 @@ export default class AwesomeProject extends Component {
           Cmd+D or shake for dev menu
         </Text>
       </View>
+    );
+  }
+
+  listDays() {
+    return this.days.map(function(day) {
+      return <DayItem day={day} />
+    });
+  }
+}
+
+class DayItem extends Component {
+  render() {
+    return (
+      <Text style={styles.day}>
+        {this.props.day}
+      </Text>
     );
   }
 }
@@ -48,6 +70,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  day: {
+    fontSize: 18,
+    color: '#0000FF'
+  }
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
