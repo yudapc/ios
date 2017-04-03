@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Text } from 'react-native';
+import styles from './styles';
 
 class DayItem extends Component {
   render() {
@@ -14,11 +11,5 @@ class DayItem extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  day: {
-    fontSize: 18,
-    color: '#0000FF'
-  }
-});
 
 module.exports = DayItem;

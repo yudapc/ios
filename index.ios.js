@@ -7,13 +7,9 @@
 import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  NavigatorIOS,
-  TouchableHighlight
+  NavigatorIOS
 } from 'react-native';
-import HomePage from './src/components/homepage/homepage';
+import HomePage from './src/components/homepage';
 
 export default class AwesomeProject extends Component {
   render() {
